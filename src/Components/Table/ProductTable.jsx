@@ -29,7 +29,7 @@ export const ProductTable = ({ rows, newRow, deleteRow, editRow }) => {
                   <span className="actions">
                     <BsFillTrashFill
                       className="delete-btn"
-                      onClick={() => deleteRow(idx, row.id)}
+                      onClick={() => deleteRow(idx, row.productId)}
                     />
                     <BsFillPencilFill
                       className="edit-btn"

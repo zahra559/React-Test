@@ -26,9 +26,9 @@ const Login = () => {
     e.preventDefault();
     if (input.username !== "" && input.password !== "") {
       var response = await post();
-      if (!response.ok) alert(response.text);
+      const data = await response.json();
+      if (!response.ok) alert(data);
       else {
-        const data = await response.json();
         localStorage.setItem("Token", data.token);
         localStorage.setItem("Role", data.userRole);
         setLogged(true);

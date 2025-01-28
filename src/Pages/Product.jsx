@@ -56,7 +56,6 @@ const Product = () => {
     }
   };
   const newProduct = async (newRow) => {
-    console.log(newRow);
     var response = await ProductApi.createProduct(
       newRow.name,
       newRow.description,
@@ -64,8 +63,9 @@ const Product = () => {
       newRow.stock
     );
     if (response.ok) {
+      var data = await response.json();
       rowToEdit === null
-        ? setRows([...rows, newRow])
+        ? setRows([...rows, data])
         : setRows(
             rows.map((currRow, idx) => {
               if (idx !== rowToEdit) return currRow;

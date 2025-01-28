@@ -62,8 +62,11 @@ const Product = () => {
       newRow.password
     );
     if (response.ok) {
+      var data = await response.json();
+      console.log(response, data, "res");
+
       rowToEdit === null
-        ? setRows([...rows, newRow])
+        ? setRows([...rows, data])
         : setRows(
             rows.map((currRow, idx) => {
               if (idx !== rowToEdit) return currRow;

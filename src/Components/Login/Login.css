@@ -5,6 +5,8 @@
   margin-top: 20px;
   background: #fff;
   padding-bottom: 30px;
+  width: 500px;
+  justify-self: center;
 }
 
 .header {
@@ -41,6 +43,9 @@
   background: #eaeaea;
   border-radius: 6px;
 }
+.input input :focus {
+  background: transparent;
+}
 
 .input img {
   margin: 0px 30px;
@@ -53,6 +58,9 @@
   outline: none;
   color: #797979;
   font-size: 19px;
+}
+.input input:focus {
+  background-color: transparent;
 }
 .submit-container {
   display: flex;
